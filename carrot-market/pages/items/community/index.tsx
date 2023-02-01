@@ -55,7 +55,7 @@ const Community: NextPage = () => {
     </Link>
     
         ))]}
-      
+    <Link href="/items/community/write">
       <button className="p-4 shadow-xl hover:bg-orange-500 bg-orange-400 text-white rounded-full fixed right-3 bottom-5 transition-colors">
         <svg
           className="w-6 h-6"
@@ -71,7 +71,9 @@ const Community: NextPage = () => {
             d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
           ></path>
         </svg>
-      </button>
+      </button>  
+    </Link>
+      
     </div>
   );
 };
