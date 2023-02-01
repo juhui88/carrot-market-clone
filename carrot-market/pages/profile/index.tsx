@@ -8,7 +8,10 @@ const Profile: NextPage = () => {
         <div className="h-12 w-12 bg-slate-500 rounded-full"/>
         <div className="flex flex-col pl-2">
           <span className="font-semibold">Steve Jebs</span>
-          <span className="text-sm text-gray-500">Edit profile &rarr;</span>
+          <Link href="/profile/edit">
+          <span className="text-sm text-gray-500">Edit profile &rarr;</span>  
+          </Link>
+          
         </div>
       </div>
       <div className="grid grid-cols-3 my-10" >
