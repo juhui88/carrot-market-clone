@@ -55,6 +55,7 @@ const Home: NextPage = () => {
         </div>
         
       ))}
+      <Link href="/items/upload">
       <button className="p-4 shadow-xl hover:bg-orange-500 bg-orange-400 text-white rounded-full fixed right-3 bottom-5 transition-colors">
         <svg
           className="h-6 w-6"
@@ -71,7 +72,9 @@ const Home: NextPage = () => {
             d="M12 6v6m0 0v6m0-6h6m-6 0H6"
           />
         </svg>
-      </button>
+      </button>  
+      </Link>
+      
     </div>
   );
 };
