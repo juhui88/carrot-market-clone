@@ -26,6 +26,12 @@ const Upload: NextPage = () => {
         </div>
       </div>
       <div className="my-2">
+        <label htmlFor="name" className="font-semibold">Name</label>
+        <div className="relative mt-1 flex items-center w-full text-gray-500">
+          <input id="name" className="w-full pl-7 rounded-lg appearance-none border border-gray-400  text-black focus:border-orange-500 focus:ring-orange-500" type="text" />
+        </div>
+      </div>
+      <div className="my-2">
         <label htmlFor="price" className="font-semibold">Price</label>
         <div className="relative mt-1 flex items-center w-full text-gray-500">
           <div className="absolute left-0 pl-2" >
