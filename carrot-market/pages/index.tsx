@@ -1,12 +1,15 @@
 import type { NextPage } from "next";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
     <div className="mt-10">
       {[...Array(10).fill(1)].map((_, i) => (
-        <div key={i} className="p-3 border-b border-gray-300">
+        
+        <div  key={i} className="p-3 border-b border-gray-300">
           <div className="flex space-x-4">
-            <div className="h-24 w-24 bg-gray-400 rounded-lg"/>
+            <Link href = {`/items/${i}`}><div className="h-24 w-24 bg-gray-400 rounded-lg"/></Link>
+            
             <div className="flex flex-col pt-2">
               <h3 className="font-semibold">New iPhone 14</h3>
               <span className="text-gray-400 text-sm">Black</span>
@@ -50,6 +53,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
+        
       ))}
       <button className="p-4 shadow-xl hover:bg-orange-500 bg-orange-400 text-white rounded-full fixed right-3 bottom-5 transition-colors">
         <svg
