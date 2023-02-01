@@ -1,7 +1,9 @@
+import Layout from "@/components/layout";
 import type { NextPage } from "next";
 
 const ItemDetail: NextPage = () => {
   return (
+    <Layout canGoBack>
     <div className="p-3">
       <div className="">
         <div className="bg-slate-300 w-full h-96"/>
@@ -59,7 +61,9 @@ const ItemDetail: NextPage = () => {
           ))}
         </div>
       </div>
-    </div>
+    </div>  
+    </Layout>
+    
   );
 };
 

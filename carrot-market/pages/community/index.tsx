@@ -7,7 +7,7 @@ const Community: NextPage = () => {
     <Layout title="동네생활" hasTabBar>
     <div className=" px-3 flex flex-col space-y-8">
         {[...Array(10).fill(1).map((_,i) => (
-    <Link key = {i} href = {`/items/community/${i}`}>
+    <Link key = {i} href = {`/community/${i}`}>
     <div className="">
         <span className="bg-gray-100 rounded-full text-xs px-2.5 py-0.5 text-gray-800">동네질문</span>
         <p className="text-md mt-2">
