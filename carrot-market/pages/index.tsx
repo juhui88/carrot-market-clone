@@ -1,9 +1,11 @@
+import Layout from "@/components/layout";
 import type { NextPage } from "next";
 import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
-    <div className="mt-10">
+    <Layout title="홈" hasTabBar>
+    <div className="">
       {[...Array(5).fill(1)].map((_, i) => (
         
         <div  key={i} className="p-3 border-b border-gray-300">
@@ -56,7 +58,7 @@ const Home: NextPage = () => {
         
       ))}
       <Link href="/items/upload">
-      <button className="p-4 shadow-xl hover:bg-orange-500 bg-orange-400 text-white rounded-full fixed right-3 bottom-5 transition-colors">
+      <button className="p-4 shadow-xl hover:bg-orange-500 bg-orange-400 text-white rounded-full fixed right-3 bottom-24 transition-colors">
         <svg
           className="h-6 w-6"
           xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +77,9 @@ const Home: NextPage = () => {
       </button>  
       </Link>
       
-    </div>
+    </div>  
+    </Layout>
+    
   );
 };
 

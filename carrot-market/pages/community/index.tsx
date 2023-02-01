@@ -1,9 +1,11 @@
+import Layout from "@/components/layout";
 import type { NextPage } from "next";
 import Link from "next/link";
 
 const Community: NextPage = () => {
   return (
-    <div className="py-16 px-3 flex flex-col space-y-8">
+    <Layout title="동네생활" hasTabBar>
+    <div className=" px-3 flex flex-col space-y-8">
         {[...Array(10).fill(1).map((_,i) => (
     <Link key = {i} href = {`/items/community/${i}`}>
     <div className="">
@@ -56,7 +58,7 @@ const Community: NextPage = () => {
     
         ))]}
     <Link href="/items/community/write">
-      <button className="p-4 shadow-xl hover:bg-orange-500 bg-orange-400 text-white rounded-full fixed right-3 bottom-5 transition-colors">
+      <button className="p-4 shadow-xl hover:bg-orange-500 bg-orange-400 text-white rounded-full fixed right-3 bottom-24 transition-colors">
         <svg
           className="w-6 h-6"
           fill="none"
@@ -74,7 +76,9 @@ const Community: NextPage = () => {
       </button>  
     </Link>
       
-    </div>
+    </div>  
+    </Layout>
+    
   );
 };
 

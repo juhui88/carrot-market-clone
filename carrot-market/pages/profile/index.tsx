@@ -1,9 +1,11 @@
+import Layout from "@/components/layout";
 import type { NextPage } from "next";
 import Link from "next/link";
 
 const Profile: NextPage = () => {
   return (
-    <div className="py-10 px-4">
+    <Layout title="나의 캐럿" hasTabBar>
+    <div className="pb-10 px-4">
       <div className="flex items-center">
         <div className="h-12 w-12 bg-slate-500 rounded-full"/>
         <div className="flex flex-col pl-2">
@@ -148,7 +150,9 @@ const Profile: NextPage = () => {
           </p>
         </div>
       </div>
-    </div>
+    </div>  
+    </Layout>
+    
   );
 };
 
