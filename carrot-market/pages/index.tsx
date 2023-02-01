@@ -4,7 +4,7 @@ import Link from "next/link";
 const Home: NextPage = () => {
   return (
     <div className="mt-10">
-      {[...Array(10).fill(1)].map((_, i) => (
+      {[...Array(5).fill(1)].map((_, i) => (
         
         <div  key={i} className="p-3 border-b border-gray-300">
           <div className="flex space-x-4">
