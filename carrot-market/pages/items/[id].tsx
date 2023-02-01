@@ -1,5 +1,6 @@
 import Layout from "@/components/layout";
 import type { NextPage } from "next";
+import Button from "../../components/button";
 
 const ItemDetail: NextPage = () => {
   return (
@@ -27,8 +28,8 @@ const ItemDetail: NextPage = () => {
             and that ni**a Winston or anybody else is in there, you the first
             motherfucker to get shot. You understand?
           </p>
-          <div className="mt-4 flex h-10 space-x-2">
-            <button className="bg-orange-500 w-full rounded-md text-white focus:outline-none focus:ring-2 ring-offset-2 ring-orange-500">Talk to seller</button>
+          <div className="mt-4 flex items-center h-10 space-x-2">
+            <Button large text="Talk to seller"/>
             <button >
               <svg
                 className="h-5 w-5 text-gray-400 "

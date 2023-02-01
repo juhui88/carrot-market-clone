@@ -25,7 +25,7 @@ export default function Layout({
       <div
         className={cls(
           !canGoBack ? "justify-center" : "",
-          "bg-white w-full max-w-xl text-lg px-10 font-medium py-3 fixed text-gray-800 border-b top-0  flex items-center"
+          "bg-white w-full max-w-xl text-lg px-4 font-medium py-3 fixed text-gray-800 border-b top-0  flex items-center"
         )}
       >
         {canGoBack ? <button onClick={onClick}>
@@ -49,7 +49,12 @@ export default function Layout({
       <div className={cls("pt-16", hasTabBar ? "pb-16" : "")}>{children}</div>
       {hasTabBar ? (
         <nav className="bg-white max-w-xl text-gray-700 border-t fixed bottom-0 w-full px-10 pb-5 pt-3 flex justify-between text-xs">
-        <Link href="/" className="flex flex-col items-center space-y-2">
+        <Link href="/" className={cls(
+                "flex flex-col items-center space-y-2 ",
+                router.pathname === "/"
+                  ? "text-orange-500"
+                  : "hover:text-gray-500 transition-colors"
+              )}>
             <svg
               className="w-6 h-6"
               fill="none"
@@ -66,7 +71,12 @@ export default function Layout({
             </svg>
             <span>홈</span>
         </Link>
-        <Link href="community" className="flex flex-col items-center space-y-2">
+        <Link href="community" className={cls(
+                "flex flex-col items-center space-y-2 ",
+                router.pathname === "/community"
+                  ? "text-orange-500"
+                  : "hover:text-gray-500 transition-colors"
+              )}>
             <svg
               className="w-6 h-6"
               fill="none"
@@ -81,9 +91,14 @@ export default function Layout({
                 d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
               ></path>
             </svg>
-            <span>동내생활</span>
+            <span>동네생활</span>
         </Link>
-        <Link href="/chats"className="flex flex-col items-center space-y-2">
+        <Link href="/chats"className={cls(
+                "flex flex-col items-center space-y-2 ",
+                router.pathname === "/chats"
+                  ? "text-orange-500"
+                  : "hover:text-gray-500 transition-colors"
+              )}>
           
             <svg
               className="w-6 h-6"
@@ -101,7 +116,12 @@ export default function Layout({
             </svg>
             <span>채팅</span>
         </Link>
-        <Link href="/streams" className="flex flex-col items-center space-y-2">
+        <Link href="/live" className={cls(
+                "flex flex-col items-center space-y-2 ",
+                router.pathname === "/live"
+                  ? "text-orange-500"
+                  : "hover:text-gray-500 transition-colors"
+              )}>
           
             <svg
               className="w-6 h-6"
@@ -120,7 +140,12 @@ export default function Layout({
             <span>라이브</span>
           
         </Link>
-        <Link href="/profile"className="flex flex-col items-center space-y-2">
+        <Link href="/profile"className={cls(
+                "flex flex-col items-center space-y-2 ",
+                router.pathname === "/profile"
+                  ? "text-orange-500"
+                  : "hover:text-gray-500 transition-colors"
+              )}>
           
             <svg
               className="w-6 h-6"
