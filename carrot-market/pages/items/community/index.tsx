@@ -1,11 +1,13 @@
 import type { NextPage } from "next";
+import Link from "next/link";
 
 const Community: NextPage = () => {
   return (
-    <div className="py-16 px-3 space-y-8">
+    <div className="py-16 px-3 flex flex-col space-y-8">
         {[...Array(10).fill(1).map((_,i) => (
-    <div key = {i} className="">
-        <span className="bg-gray-200 rounded-full text-sm px-2 ml-1 text-gray-700">동네질문</span>
+    <Link key = {i} href = {`/items/community/${i}`}>
+    <div className="">
+        <span className="bg-gray-100 rounded-full text-xs px-2.5 py-0.5 text-gray-800">동네질문</span>
         <p className="text-md mt-2">
           <span className="text-orange-500 font-bold">Q.</span> What is the best mandu restaurant?
         </p>
@@ -49,7 +51,9 @@ const Community: NextPage = () => {
             <span>답변 1</span>
           </span>
         </div>
-      </div>
+      </div>    
+    </Link>
+    
         ))]}
       
       <button className="p-4 shadow-xl hover:bg-orange-500 bg-orange-400 text-white rounded-full fixed right-3 bottom-5 transition-colors">
