@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Link from "next/link";
 
 const Profile: NextPage = () => {
   return (
@@ -11,6 +12,7 @@ const Profile: NextPage = () => {
         </div>
       </div>
       <div className="grid grid-cols-3 my-10" >
+        
         <div className="grid justify-self-center gap-1">
           <div className="bg-orange-500 text-white justify-self-center p-3 rounded-full">
             <svg
@@ -28,8 +30,10 @@ const Profile: NextPage = () => {
               ></path>
             </svg>
           </div>
-          <span className="text-sm font-semibold text-gray-600">판매내역</span>
-        </div>
+          <span className="text-sm font-semibold text-gray-600 text-center">판매내역</span>
+        </div>  
+        
+        <Link href = "/profile/bought">
         <div className="grid justify-self-center gap-1">
           <div className="bg-orange-500 text-white justify-self-center p-3 rounded-full">
             <svg
@@ -47,8 +51,9 @@ const Profile: NextPage = () => {
               ></path>
             </svg>
           </div>
-          <span  className="text-sm font-semibold text-gray-600">구매내역</span>
+          <span  className="text-sm font-semibold text-gray-600 text-center">구매내역</span>
         </div>
+        </Link>
         <div className="grid justify-self-center gap-1">
           <div className="bg-orange-500 text-white justify-self-center p-3 rounded-full">
             <svg
@@ -66,7 +71,7 @@ const Profile: NextPage = () => {
               ></path>
             </svg>
           </div>
-          <span  className="text-sm font-semibold text-gray-600">관심목록</span>
+          <span  className="text-sm font-semibold text-gray-600 text-center">관심목록</span>
         </div>
       </div>
       <div>
