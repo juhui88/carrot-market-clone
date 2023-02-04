@@ -98,3 +98,4 @@ const Enter :NextPage = () => {
     </div>
   );
 }
+export default Enter;
