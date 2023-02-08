@@ -1,6 +1,6 @@
 import Layout from "@/components/layout";
 import type { NextPage } from "next";
-import Message from "../../components/message";
+import Message from "@components/message";
 
 const Live: NextPage = () => {
   return (

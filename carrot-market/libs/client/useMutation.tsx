@@ -16,11 +16,12 @@ export default function useMutation (url:string) :UseMutationResult {
   function mutation(data: any) {
     setSate((prev) => ({ ...prev, loading: true }));
     fetch(url, {
-      method: "POST",
-      headers: {
+        method: "POST",
+        body: JSON.stringify(data),  
+        headers: {
         "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
+        },
+      
     })
       .then((response) => response.json().catch(() => {}))
       .then((data) => setSate((prev) => ({ ...prev, data })))
