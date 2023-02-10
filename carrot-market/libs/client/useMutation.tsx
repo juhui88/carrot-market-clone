@@ -8,13 +8,13 @@ interface UseMutationState {
 type UseMutationResult = [(data: any) => void, UseMutationState];
 
 export default function useMutation (url:string) :UseMutationResult {
-    const [state, setSate] = useState<UseMutationState>({
+    const [state, setState] = useState<UseMutationState>({
     loading: false,
     data: undefined,
     error: undefined,
   });
   function mutation(data: any) {
-    setSate((prev) => ({ ...prev, loading: true }));
+    setState((prev) => ({ ...prev, loading: true }));
     fetch(url, {
         method: "POST",
         body: JSON.stringify(data),  
@@ -24,9 +24,9 @@ export default function useMutation (url:string) :UseMutationResult {
       
     })
       .then((response) => response.json().catch(() => {}))
-      .then((data) => setSate((prev) => ({ ...prev, data })))
-      .catch((error) => setSate((prev) => ({ ...prev, error })))
-      .finally(() => setSate((prev) => ({ ...prev, loading: false })));
+      .then((data) => setState((prev) => ({ ...prev, data })))
+      .catch((error) => setState((prev) => ({ ...prev, error })))
+      .finally(() => setState((prev) => ({ ...prev, loading: false })));
   }
   return [mutation, { ...state }];
 }
