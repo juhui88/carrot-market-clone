@@ -21,12 +21,13 @@ model User {
   updateAt  DateTime  @updatedAt
   tokens    Token[]
   products  Product[]
+  favs      Fav[]
 }
 
 model Token {
   id        Int      @id @default(autoincrement())
   payload   String   @unique
-  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade) // 유저 사라지면 토큰 정보도 같이 사라짐
   userId    Int
   createdAt DateTime @default(now())
   updateAt  DateTime @updatedAt
@@ -44,6 +45,20 @@ model Product {
   name        String
   price       Int
   description String   @db.MediumText // 용량 더 크게
+  favs        Fav[]
 
   @@index([userId])
+}
+
+model Fav {
+  id        Int      @id @default(autoincrement())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    Int
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  productId Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+  @@index([productId])
 }
