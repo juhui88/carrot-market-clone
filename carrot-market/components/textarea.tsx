@@ -21,7 +21,7 @@ interface TextAreaProps {
         <textarea
           id={name}
           {...register}
-          className="mt-1 shadow-sm w-full focus:ring-orange-500 rounded-md border-gray-300 focus:border-orange-500 "
+          className="mt-1 shadow-sm w-full focus:ring-orange-500 rounded-md border-gray-300 focus:border-orange-500 whitespace-pre-wrap"
           rows={4}
           {...rest}
         />
